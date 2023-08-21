@@ -1,0 +1,164 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overscroll-behavior-y: none;
+}
+
+.container {
+    display: grid;
+    /*justify-content: center;*/
+    grid-template-rows: 1.2fr 1fr;
+    background-color: rgb(32, 29, 38);
+    min-height: 100vh; 
+}
+.todo_body{
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    min-width: 60%;
+}
+.container h2{
+    text-align: left;
+   font-size: 28px;
+    color: rgb(193, 185, 185);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-bottom: 1.5em;
+    letter-spacing: 4px;
+    font-weight: lighter;
+}
+.bg_image{
+    background-image: url(macbook.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+ #input-task{
+ padding: 10px;
+ width: 60%;
+ background-color:rgb(32, 29, 38) ;
+ color: rgb(193, 185, 185);
+ border: 0;
+ outline:none;
+}
+#input-task::placeholder{
+    font-family:'Courier New', Courier, monospace;
+    font-style: italic;
+}
+#add-task{
+    padding: 10px;
+    outline: none;
+    border-radius: 5px;
+    background-color: rgb(32, 29, 38);
+    color: rgb(193, 185, 185);
+    cursor: pointer;
+    border: 0;
+}
+.task {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    padding: 6px;
+    color: rgb(188, 183, 183);
+    background-color: rgb(32, 29, 38);
+    border-bottom: 1px solid rgb(59, 60, 67);
+}
+.task li {
+    list-style-type: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;    
+}
+.check{
+margin-right: 3px;
+background-color: rgb(32, 29, 38);
+border: 0;
+/*color: rgb(193, 185, 185);*/
+border-radius: 3px;
+}
+.del{
+    padding: 3px;
+    cursor: pointer;
+    background-color: rgb(132, 7, 248);
+    border: 0;
+    color: rgb(193, 185, 185);
+    border-radius: 3px;
+    transition: all .4s ease-in-out;
+
+}
+.del:hover{
+    background-color: rgb(213, 19, 19);
+
+}
+#task-container::-webkit-scrollbar {
+    width: 0;
+    
+  }
+#task-container{
+    height: 300px;
+    margin-top: 30px;
+    position: relative;
+    background-color: rgb(32, 29, 38);
+    overflow-y: scroll;
+    box-shadow: 0px 1px 3px 0px black;
+    padding: 5px;
+}
+.hidTaskBar{
+    visibility: hidden;
+
+}
+#add-task-container{
+    width: 100%;
+}
+.intro_text{
+    display: grid;
+    place-items: center;
+    height: 100%;
+  
+}
+.intro_text div{
+    color: rgb(90, 91, 93);
+   font-weight: bold;
+    font-size: 110%;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;  
+    height: fit-content;
+  transition: all 0.5s;
+}
+
+.hidden {
+    display: none;
+}
+.none{
+    background:transparent;
+
+}
+svg.bi.bi-check2-square{
+    color: cornsilk;
+cursor: pointer;
+    transition: color .4s ease-in-out;
+}
+svg.bi.bi-check2-square:hover{
+    color: rgb(255, 0, 123);
+    transform: rotate(40deg);
+}
+@media screen and (max-width:600px){
+    .todo_body{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        min-width: 95%;
+    }
+    #task-container{
+        height: 60vh;
+    }
+    #input-task{
+        padding: 14px;
+    }
+    #add-task{
+        padding: 14px;
+    }
+}
