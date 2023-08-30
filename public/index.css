@@ -30,7 +30,7 @@
     font-weight: lighter;
 }
 .bg_image{
-    background-image: url(macbook.jpg);
+    background-image: url('./image/macbook.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
